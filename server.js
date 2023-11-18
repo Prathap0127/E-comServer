@@ -22,12 +22,12 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use("/api/users", authRoute);
+app.use("/api/users", authRoute); //
 app.use("/api/category", categoryRoutes);
 app.use("/api/product", productRoutes);
 
 app.get("/", (req, res) => {
-  res.send("<h1>Welcom to ASN Jewel</h1>");
+  res.send("<h1>Welcom to ASN Ecom</h1>");
 });
 
 const PORT = process.env.PORT || 8080;
