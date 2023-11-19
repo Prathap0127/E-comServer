@@ -58,7 +58,7 @@ export const createProductController = async (req, res) => {
   }
 };
 
-// get Products
+// get Products data
 
 export const getProductController = async (req, res) => {
   try {
@@ -83,7 +83,7 @@ export const getProductController = async (req, res) => {
   }
 };
 
-// get single Product
+// get single Product data
 
 export const singleProductController = async (req, res) => {
   try {

@@ -22,9 +22,9 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
-app.use("/api/users", authRoute); //
-app.use("/api/category", categoryRoutes);
-app.use("/api/product", productRoutes);
+app.use("/api/users", authRoute); //authorization route
+app.use("/api/category", categoryRoutes); //category routes
+app.use("/api/product", productRoutes); //product routes
 
 app.get("/", (req, res) => {
   res.send("<h1>Welcom to ASN Ecom</h1>");

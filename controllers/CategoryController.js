@@ -1,6 +1,7 @@
 import CategoryModel from "../models/CategoryModel.js";
 import slugify from "slugify";
 
+//create category list
 export const createCategoryController = async (req, res) => {
   try {
     const { name } = req.body;
@@ -8,6 +9,7 @@ export const createCategoryController = async (req, res) => {
       return res.status(401).send({ message: "Name is Reqired" });
     }
     const exisitingCategory = await CategoryModel.findOne({ name });
+    //check the category list
     if (exisitingCategory) {
       return res.status(200).send({
         success: false,
